@@ -1,14 +1,6 @@
-//
-//  PusherPresenceChannel.swift
-//  PusherSwift
-//
-//  Created by Hamilton Chapman on 01/04/2016.
-//
-//
-
 import Foundation
 
-public typealias PusherUserInfoObject = [String : AnyObject]
+public typealias PusherUserInfoObject = [String: AnyObject]
 
 @objcMembers
 @objc open class PusherPresenceChannel: PusherChannel {
@@ -37,11 +29,12 @@ public typealias PusherUserInfoObject = [String : AnyObject]
         connection: PusherConnection,
         auth: PusherAuth? = nil,
         onMemberAdded: ((PusherPresenceChannelMember) -> ())? = nil,
-        onMemberRemoved: ((PusherPresenceChannelMember) -> ())? = nil) {
-            self.members = []
-            self.onMemberAdded = onMemberAdded
-            self.onMemberRemoved = onMemberRemoved
-            super.init(name: name, connection: connection, auth: auth)
+        onMemberRemoved: ((PusherPresenceChannelMember) -> ())? = nil
+    ) {
+        self.members = []
+        self.onMemberAdded = onMemberAdded
+        self.onMemberRemoved = onMemberRemoved
+        super.init(name: name, connection: connection, auth: auth)
     }
 
     /**
@@ -51,7 +44,7 @@ public typealias PusherUserInfoObject = [String : AnyObject]
         - parameter memberJSON: A dictionary representing the member that has joined
                                 the presence channel
     */
-    internal func addMember(memberJSON: [String : AnyObject]) {
+    internal func addMember(memberJSON: [String : Any]) {
         let member: PusherPresenceChannelMember
 
         if let userId = memberJSON["user_id"] as? String {
@@ -98,7 +91,7 @@ public typealias PusherUserInfoObject = [String : AnyObject]
         - parameter memberJSON: A dictionary representing the member that has left the
                                 presence channel
     */
-    internal func removeMember(memberJSON: [String : AnyObject]) {
+    internal func removeMember(memberJSON: [String : Any]) {
         let id: String
 
         if let userId = memberJSON["user_id"] as? String {
