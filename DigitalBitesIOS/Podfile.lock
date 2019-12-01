@@ -1,0 +1,20 @@
+PODS:
+  - Alamofire (4.6.0)
+  - PusherSwift (5.1.1)
+
+DEPENDENCIES:
+  - Alamofire (~> 4.6.0)
+  - PusherSwift (~> 5.1.1)
+
+SPEC REPOS:
+  trunk:
+    - Alamofire
+    - PusherSwift
+
+SPEC CHECKSUMS:
+  Alamofire: f41a599bd63041760b26d393ec1069d9d7b917f4
+  PusherSwift: de9238b6b9faec5275d452e5f43ce9c82b78731e
+
+PODFILE CHECKSUM: be51143106b78fea5be11d8ec3cdf42ed467e36b
+
+COCOAPODS: 1.8.4

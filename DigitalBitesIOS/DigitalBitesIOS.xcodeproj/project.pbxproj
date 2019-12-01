@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		820477EFD452D30BA04791F8 /* Pods_DigitalBitesIOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9D3A1030A0A9E30629F42F8 /* Pods_DigitalBitesIOS.framework */; };
 		96000A352393FCEC0084D54F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96000A342393FCEC0084D54F /* AppDelegate.swift */; };
 		96000A372393FCEC0084D54F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96000A362393FCEC0084D54F /* SceneDelegate.swift */; };
 		96000A412393FCEC0084D54F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96000A3F2393FCEC0084D54F /* LaunchScreen.storyboard */; };
@@ -138,6 +139,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5F2C8F90C31D46B99E73278C /* Pods-DigitalBitesIOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DigitalBitesIOS.debug.xcconfig"; path = "Target Support Files/Pods-DigitalBitesIOS/Pods-DigitalBitesIOS.debug.xcconfig"; sourceTree = "<group>"; };
 		96000A312393FCEC0084D54F /* DigitalBitesIOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DigitalBitesIOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		96000A342393FCEC0084D54F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		96000A362393FCEC0084D54F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -338,6 +340,8 @@
 		96000B8F2393FDB10084D54F /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = "../../Digital Bites/Digital Bites/ViewController.swift"; sourceTree = "<group>"; };
 		96000B922393FDF30084D54F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "../../Digital Bites/Digital Bites/Base.lproj/Main.storyboard"; sourceTree = "<group>"; };
 		96000B942393FE160084D54F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = "../../Digital Bites/Digital Bites/Assets.xcassets"; sourceTree = "<group>"; };
+		E9D3A1030A0A9E30629F42F8 /* Pods_DigitalBitesIOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DigitalBitesIOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F157DB3359641231825BFF15 /* Pods-DigitalBitesIOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DigitalBitesIOS.release.xcconfig"; path = "Target Support Files/Pods-DigitalBitesIOS/Pods-DigitalBitesIOS.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -345,17 +349,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				820477EFD452D30BA04791F8 /* Pods_DigitalBitesIOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0B96CA423938A9628DCC2CFF /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5F2C8F90C31D46B99E73278C /* Pods-DigitalBitesIOS.debug.xcconfig */,
+				F157DB3359641231825BFF15 /* Pods-DigitalBitesIOS.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		612389258EF1072FC8AEDE52 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E9D3A1030A0A9E30629F42F8 /* Pods_DigitalBitesIOS.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		96000A282393FCEC0084D54F = {
 			isa = PBXGroup;
 			children = (
 				96000A332393FCEC0084D54F /* DigitalBitesIOS */,
 				96000A322393FCEC0084D54F /* Products */,
+				0B96CA423938A9628DCC2CFF /* Pods */,
+				612389258EF1072FC8AEDE52 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -685,9 +710,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 96000A452393FCEC0084D54F /* Build configuration list for PBXNativeTarget "DigitalBitesIOS" */;
 			buildPhases = (
+				C4D2E7BD11CE9D73EFAED703 /* [CP] Check Pods Manifest.lock */,
 				96000A2D2393FCEC0084D54F /* Sources */,
 				96000A2E2393FCEC0084D54F /* Frameworks */,
 				96000A2F2393FCEC0084D54F /* Resources */,
+				C7D22A4D4DB58E91CB1DFE25 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -744,6 +771,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		C4D2E7BD11CE9D73EFAED703 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DigitalBitesIOS-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C7D22A4D4DB58E91CB1DFE25 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DigitalBitesIOS/Pods-DigitalBitesIOS-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DigitalBitesIOS/Pods-DigitalBitesIOS-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DigitalBitesIOS/Pods-DigitalBitesIOS-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		96000A2D2393FCEC0084D54F /* Sources */ = {
@@ -1015,6 +1084,7 @@
 		};
 		96000A462393FCEC0084D54F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5F2C8F90C31D46B99E73278C /* Pods-DigitalBitesIOS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -1033,6 +1103,7 @@
 		};
 		96000A472393FCEC0084D54F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F157DB3359641231825BFF15 /* Pods-DigitalBitesIOS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
