@@ -139,6 +139,11 @@
 		96E17AE223940880005C8F4E /* ResTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96E17AE123940880005C8F4E /* ResTableViewController.swift */; };
 		96E17AE423940A16005C8F4E /* ResTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96E17AE323940A16005C8F4E /* ResTableViewCell.swift */; };
 		96E17AE62394107E005C8F4E /* FoodViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96E17AE52394107E005C8F4E /* FoodViewController.swift */; };
+		96E17AE82394246D005C8F4E /* OrdersTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96E17AE72394246D005C8F4E /* OrdersTableViewController.swift */; };
+		96E17AEA2394268F005C8F4E /* OrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96E17AE92394268F005C8F4E /* OrderViewController.swift */; };
+		96E17AEC23942AC8005C8F4E /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96E17AEB23942AC8005C8F4E /* ActivityIndicator.swift */; };
+		96E17AEE23942C9F005C8F4E /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96E17AED23942C9F005C8F4E /* Order.swift */; };
+		96E17AF023942CC6005C8F4E /* Pizza.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96E17AEF23942CC6005C8F4E /* Pizza.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -346,6 +351,11 @@
 		96E17AE123940880005C8F4E /* ResTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResTableViewController.swift; sourceTree = "<group>"; };
 		96E17AE323940A16005C8F4E /* ResTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResTableViewCell.swift; sourceTree = "<group>"; };
 		96E17AE52394107E005C8F4E /* FoodViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodViewController.swift; sourceTree = "<group>"; };
+		96E17AE72394246D005C8F4E /* OrdersTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrdersTableViewController.swift; sourceTree = "<group>"; };
+		96E17AE92394268F005C8F4E /* OrderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderViewController.swift; sourceTree = "<group>"; };
+		96E17AEB23942AC8005C8F4E /* ActivityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
+		96E17AED23942C9F005C8F4E /* Order.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Order.swift; sourceTree = "<group>"; };
+		96E17AEF23942CC6005C8F4E /* Pizza.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pizza.swift; sourceTree = "<group>"; };
 		E9D3A1030A0A9E30629F42F8 /* Pods_DigitalBitesIOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DigitalBitesIOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F157DB3359641231825BFF15 /* Pods-DigitalBitesIOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DigitalBitesIOS.release.xcconfig"; path = "Target Support Files/Pods-DigitalBitesIOS/Pods-DigitalBitesIOS.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -414,6 +424,11 @@
 				96000A362393FCEC0084D54F /* SceneDelegate.swift */,
 				96000B8F2393FDB10084D54F /* ViewController.swift */,
 				96000B912393FDF30084D54F /* Main.storyboard */,
+				96E17AED23942C9F005C8F4E /* Order.swift */,
+				96E17AEF23942CC6005C8F4E /* Pizza.swift */,
+				96E17AE72394246D005C8F4E /* OrdersTableViewController.swift */,
+				96E17AE92394268F005C8F4E /* OrderViewController.swift */,
+				96E17AEB23942AC8005C8F4E /* ActivityIndicator.swift */,
 				96E17AE123940880005C8F4E /* ResTableViewController.swift */,
 				96E17AE52394107E005C8F4E /* FoodViewController.swift */,
 				96E17AE323940A16005C8F4E /* ResTableViewCell.swift */,
@@ -843,6 +858,7 @@
 				96000B6C2393FD590084D54F /* NSButton+WebCache.m in Sources */,
 				96000B412393FD580084D54F /* IQTextView.swift in Sources */,
 				96000B532393FD580084D54F /* NSImage+Compatibility.m in Sources */,
+				96E17AE82394246D005C8F4E /* OrdersTableViewController.swift in Sources */,
 				96000B712393FD590084D54F /* SDImageCache.m in Sources */,
 				96000B462393FD580084D54F /* IQUIView+IQKeyboardToolbar.swift in Sources */,
 				96000B362393FD580084D54F /* Response.swift in Sources */,
@@ -850,6 +866,7 @@
 				96000B222393FD580084D54F /* ParameterEncoder.swift in Sources */,
 				96000B402393FD580084D54F /* MBProgressHUD.m in Sources */,
 				96000B812393FD590084D54F /* SDWebImageOptionsProcessor.m in Sources */,
+				96E17AEE23942C9F005C8F4E /* Order.swift in Sources */,
 				96000B452393FD580084D54F /* IQToolbar.swift in Sources */,
 				96000B8D2393FD590084D54F /* NSBezierPath+RoundedCorners.m in Sources */,
 				96000B5D2393FD580084D54F /* UIImage+Transform.m in Sources */,
@@ -882,6 +899,7 @@
 				96000B702393FD590084D54F /* SDWebImageDownloaderConfig.m in Sources */,
 				96000B382393FD580084D54F /* Result+Alamofire.swift in Sources */,
 				96000B6A2393FD590084D54F /* SDWebImagePrefetcher.m in Sources */,
+				96E17AEC23942AC8005C8F4E /* ActivityIndicator.swift in Sources */,
 				96000B3E2393FD580084D54F /* SessionDelegate.swift in Sources */,
 				96000B7B2393FD590084D54F /* SDImageGraphics.m in Sources */,
 				96000B312393FD580084D54F /* URLRequest+Alamofire.swift in Sources */,
@@ -915,6 +933,8 @@
 				96000B662393FD590084D54F /* SDWebImageCompat.m in Sources */,
 				96000B7D2393FD590084D54F /* UIImage+MemoryCacheCost.m in Sources */,
 				96000B522393FD580084D54F /* SDImageHEICCoder.m in Sources */,
+				96E17AEA2394268F005C8F4E /* OrderViewController.swift in Sources */,
+				96E17AF023942CC6005C8F4E /* Pizza.swift in Sources */,
 				96000B4E2393FD580084D54F /* IQUIViewController+Additions.swift in Sources */,
 				96000B672393FD590084D54F /* SDImageAPNGCoder.m in Sources */,
 				96000A562393FD3A0084D54F /* CategoryViewController.swift in Sources */,
