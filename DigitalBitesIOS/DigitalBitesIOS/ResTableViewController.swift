@@ -24,7 +24,7 @@ class ResTableViewController: UITableViewController {
                 self.tableView.reloadData()
             }
         }
-
+    
         private func fetchInventory(completion: @escaping ([Pizza]?) -> Void) {
             Alamofire.request("http://127.0.0.1:4000/inventory", method: .get)
                 .validate()
@@ -38,7 +38,6 @@ class ResTableViewController: UITableViewController {
 
                         return Pizza(data: data)
                     }
-
                     completion(inventory)
                 }
         }
