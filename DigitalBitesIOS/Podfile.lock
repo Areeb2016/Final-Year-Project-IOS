@@ -11,6 +11,7 @@ PODS:
 DEPENDENCIES:
   - Alamofire (~> 5.0.0-rc.3)
   - PusherSwift (~> 7.2)
+  - ReachabilitySwift
 
 SPEC REPOS:
   trunk:
@@ -27,6 +28,6 @@ SPEC CHECKSUMS:
   ReachabilitySwift: 408477d1b6ed9779dba301953171e017c31241f3
   Starscream: ef3ece99d765eeccb67de105bfa143f929026cf5
 
-PODFILE CHECKSUM: 556191a06614ccb73d06589d6e1151d961245d12
+PODFILE CHECKSUM: 1af2eb5a6851249d93e8db7010599bf5eea4148c
 
 COCOAPODS: 1.8.4

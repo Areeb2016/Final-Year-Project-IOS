@@ -29,42 +29,43 @@ class FoodViewController: UIViewController {
         @IBAction func buyButtonPressed(_ sender: Any) {
             let parameters = [
                 "pizza_id": pizza!.id,
-                "user_id": AppMisc.USER_ID
+                //"user_id": AppMisc.USER_ID
             ]
 
-            Alamofire.request("http://127.0.0.1:4000/orders", method: .post, parameters: parameters)
-                .validate()
-                .responseJSON { response in
-                    guard response.result.isSuccess else { return self.alertError() }
+//            Alamofire.request("http://127.0.0.1:4000/orders", method: .post, parameters: parameters)
+//                .validate()
+//                .responseJSON { response in
+//                    guard response.result.isSuccess else { return self.alertError() }
+//
+//                    guard let status = response.result.value as? [String: Bool],
+//                          let successful = status["status"] else { return self.alertError() }
+//
+//                    successful ? self.alertSuccess() : self.alertError()
+//                }
+//        }
 
-                    guard let status = response.result.value as? [String: Bool],
-                          let successful = status["status"] else { return self.alertError() }
-
-                    successful ? self.alertSuccess() : self.alertError()
-                }
-        }
-
-        private func alertError() {
-            return self.alert(
-                title: "Purchase unsuccessful!",
-                message: "Unable to complete purchase please try again later."
-            )
-        }
-
-        private func alertSuccess() {
-            return self.alert(
-                title: "Purchase Successful",
-                message: "You have ordered successfully, your order will be confirmed soon."
-            )
-        }
-
-        private func alert(title: String, message: String) {
-            let alertCtrl = UIAlertController(title: title, message: message, preferredStyle: .alert)
-
-            alertCtrl.addAction(UIAlertAction(title: "Okay", style: .cancel) { action in
-                self.navigationController?.popViewController(animated: true)
-            })
-
-            present(alertCtrl, animated: true, completion: nil)
-        }
+//        private func alertError() {
+//            return self.alert(
+//                title: "Purchase unsuccessful!",
+//                message: "Unable to complete purchase please try again later."
+//            )
+//        }
+//
+//        private func alertSuccess() {
+//            return self.alert(
+//                title: "Purchase Successful",
+//                message: "You have ordered successfully, your order will be confirmed soon."
+//            )
+//        }
+//
+//        private func alert(title: String, message: String) {
+//            let alertCtrl = UIAlertController(title: title, message: message, preferredStyle: .alert)
+//
+//            alertCtrl.addAction(UIAlertAction(title: "Okay", style: .cancel) { action in
+//                self.navigationController?.popViewController(animated: true)
+//            })
+//
+//            present(alertCtrl, animated: true, completion: nil)
+//        }
     }
+}

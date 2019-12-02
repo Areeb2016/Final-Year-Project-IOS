@@ -380,7 +380,7 @@
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aoI-N1-AjB">
-                                <rect key="frame" x="152" y="701" width="110" height="50"/>
+                                <rect key="frame" x="152" y="651" width="110" height="100"/>
                                 <state key="normal" title="Signup" image="icons8-signin-50"/>
                                 <connections>
                                     <action selector="btnSignupTapped:" destination="PPc-iV-hbO" eventType="touchUpInside" id="RPf-f9-UAb"/>
@@ -501,6 +501,7 @@
                                         <connections>
                                             <outlet property="resImage" destination="KFX-Et-Xqn" id="W69-dD-ZUg"/>
                                             <outlet property="resTitle" destination="aPc-0b-Qez" id="CSA-xC-Anz"/>
+                                            <segue destination="YdA-pe-F2T" kind="show" id="Ujq-eP-OQW"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -530,7 +531,7 @@
             </objects>
             <point key="canvasLocation" x="2762.3188405797105" y="774.77678571428567"/>
         </scene>
-        <!--Root View Controller-->
+        <!--Items-->
         <scene sceneID="Tnw-Ce-1LK">
             <objects>
                 <tableViewController storyboardIdentifier="ResTableViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="YdA-pe-F2T" customClass="ResTableViewController" customModule="DigitalBitesIOS" customModuleProvider="target" sceneMemberID="viewController">
@@ -587,7 +588,7 @@
                             <outlet property="delegate" destination="YdA-pe-F2T" id="omS-Nv-2Fg"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="2j0-xo-Hjb">
+                    <navigationItem key="navigationItem" title="Items" id="2j0-xo-Hjb">
                         <barButtonItem key="rightBarButtonItem" title="Orders" id="3YR-VF-wYX">
                             <connections>
                                 <action selector="ordersButtonPressed:" destination="YdA-pe-F2T" id="l9p-CY-qYb"/>
@@ -673,7 +674,7 @@
             </objects>
             <point key="canvasLocation" x="3580" y="1460"/>
         </scene>
-        <!--Root View Controller-->
+        <!--Order list-->
         <scene sceneID="qZR-Pi-P7v">
             <objects>
                 <tableViewController storyboardIdentifier="OrdersTableViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Tyy-b8-YHi" customClass="OrdersTableViewController" customModule="DigitalBitesIOS" customModuleProvider="target" sceneMemberID="viewController">
@@ -715,7 +716,7 @@
                             <outlet property="delegate" destination="Tyy-b8-YHi" id="pCP-0m-WFV"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="jWp-rm-S95">
+                    <navigationItem key="navigationItem" title="Order list" id="jWp-rm-S95">
                         <barButtonItem key="rightBarButtonItem" title="Close" id="y3R-pC-AsL">
                             <connections>
                                 <action selector="closeButtonPressed:" destination="Tyy-b8-YHi" id="93R-wW-gDP"/>
@@ -1135,4 +1136,7 @@
         <image name="phone.fill" catalog="system" width="64" height="56"/>
         <image name="square.and.arrow.up.fill" catalog="system" width="56" height="64"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="Ujq-eP-OQW"/>
+    </inferredMetricsTieBreakers>
 </document>

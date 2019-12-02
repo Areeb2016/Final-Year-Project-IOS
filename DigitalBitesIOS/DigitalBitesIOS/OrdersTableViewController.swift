@@ -17,35 +17,35 @@ class OrdersTableViewController: UITableViewController {
                 super.viewDidLoad()
                 navigationItem.title = "Orders"
 
-                fetchOrders { orders in
-                    self.orders = orders!
-                    self.tableView.reloadData()
-                }
+//                fetchOrders { orders in
+//                    self.orders = orders!
+//                    self.tableView.reloadData()
+//                }
             }
 
-            private func fetchOrders(completion: @escaping([Order]?) -> Void) {
-                Alamofire.request("http://127.0.0.1:4000/orders").validate().responseJSON { response in
-                    guard response.result.isSuccess else { return completion(nil) }
-
-                    guard let rawOrders = response.result.value as? [[String: Any]?] else { return completion(nil) }
-
-                    let orders = rawOrders.flatMap { ordersDict -> Order? in
-                        guard let orderId = ordersDict!["id"] as? String,
-                              let orderStatus = ordersDict!["status"] as? String,
-                              var pizza = ordersDict!["pizza"] as? [String: Any] else { return nil }
-
-                        pizza["image"] = UIImage(named: pizza["image"] as! String)
-
-                        return Order(
-                            id: orderId,
-                            pizza: Pizza(data: pizza),
-                            status: OrderStatus(rawValue: orderStatus)!
-                        )
-                    }
-
-                    completion(orders)
-                }
-            }
+//            private func fetchOrders(completion: @escaping([Order]?) -> Void) {
+//                Alamofire.request("http://127.0.0.1:4000/orders").validate().responseJSON { response in
+//                    guard response.result.isSuccess else { return completion(nil) }
+//
+//                    guard let rawOrders = response.result.value as? [[String: Any]?] else { return completion(nil) }
+//
+//                    let orders = rawOrders.flatMap { ordersDict -> Order? in
+//                        guard let orderId = ordersDict!["id"] as? String,
+//                              let orderStatus = ordersDict!["status"] as? String,
+//                              var pizza = ordersDict!["pizza"] as? [String: Any] else { return nil }
+//
+//                        pizza["image"] = UIImage(named: pizza["image"] as! String)
+//
+//                        return Order(
+//                            id: orderId,
+//                            pizza: Pizza(data: pizza),
+//                            status: OrderStatus(rawValue: orderStatus)!
+//                        )
+//                    }
+//
+//                    completion(orders)
+//                }
+//            }
 
             @IBAction func closeButtonPressed(_ sender: Any) {
                 dismiss(animated: true, completion: nil)
