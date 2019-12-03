@@ -4,6 +4,7 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -163,12 +164,50 @@
                                 <rect key="frame" x="0.0" y="88" width="414" height="725"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="qxt-kx-Qmn">
-                                    <size key="itemSize" width="170" height="138"/>
+                                    <size key="itemSize" width="179" height="171"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
-                                <cells/>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CategoryCollectionViewCell" id="O8d-zn-oJU" customClass="CategoryCollectionViewCell" customModule="DigitalBitesIOS" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="179" height="171"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="OkE-3l-ZKI">
+                                            <rect key="frame" x="0.0" y="0.0" width="179" height="171"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="EWU-Y4-r2H">
+                                                    <rect key="frame" x="0.0" y="4" width="179" height="127"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="127" id="UqI-Ey-Pnw"/>
+                                                        <constraint firstAttribute="width" constant="179" id="fJf-qv-5Qx"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Smokey Cauldron" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bBT-GR-QaZ">
+                                                    <rect key="frame" x="3" y="139" width="154" height="24"/>
+                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="bBT-GR-QaZ" firstAttribute="top" secondItem="EWU-Y4-r2H" secondAttribute="bottom" constant="8" id="4lE-MC-w7f"/>
+                                                <constraint firstItem="EWU-Y4-r2H" firstAttribute="leading" secondItem="OkE-3l-ZKI" secondAttribute="leading" id="6Ar-sI-DMk"/>
+                                                <constraint firstItem="EWU-Y4-r2H" firstAttribute="top" secondItem="OkE-3l-ZKI" secondAttribute="top" constant="4" id="CfG-A0-p3i"/>
+                                                <constraint firstItem="bBT-GR-QaZ" firstAttribute="leading" secondItem="OkE-3l-ZKI" secondAttribute="leading" constant="3" id="F0x-Ub-sKn"/>
+                                                <constraint firstAttribute="trailing" secondItem="EWU-Y4-r2H" secondAttribute="trailing" id="bXN-hr-LEV"/>
+                                                <constraint firstAttribute="bottom" secondItem="bBT-GR-QaZ" secondAttribute="bottom" constant="8" id="rIA-3Y-xkD"/>
+                                                <constraint firstItem="bBT-GR-QaZ" firstAttribute="top" secondItem="EWU-Y4-r2H" secondAttribute="bottom" constant="8" id="xyj-Yz-ZUH"/>
+                                            </constraints>
+                                        </collectionViewCellContentView>
+                                        <size key="customSize" width="179" height="171"/>
+                                        <connections>
+                                            <outlet property="ImgView" destination="EWU-Y4-r2H" id="Txa-Cp-9jd"/>
+                                            <outlet property="labelName" destination="bBT-GR-QaZ" id="kxM-8I-6rC"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
                             </collectionView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -185,7 +224,14 @@
                         <viewLayoutGuide key="safeArea" id="TLD-B1-0mW"/>
                     </view>
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" id="Os1-QB-g9y"/>
+                    <navigationItem key="navigationItem" id="Os1-QB-g9y">
+                        <barButtonItem key="leftBarButtonItem" image="menu" id="RNO-Yk-0od">
+                            <connections>
+                                <action selector="didTapMenu:" destination="h2A-wz-AAP" id="swg-6K-uKS"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="View" id="8GV-ul-KgI"/>
+                    </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="catCollectionView" destination="Xkv-l2-xkY" id="KC9-nV-7rk"/>
@@ -193,11 +239,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fm1-pz-tPo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2763.768115942029" y="120.53571428571428"/>
+            <point key="canvasLocation" x="3543" y="121"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="BIH-YE-Iwd">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aIE-FE-J5z" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="F0f-d3-C0i" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="hSb-N7-hsw">
@@ -209,7 +256,6 @@
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="EE1-lP-ghc"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="aIE-FE-J5z" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="131.8840579710145" y="120.53571428571428"/>
         </scene>
@@ -520,6 +566,11 @@
                         <barButtonItem key="leftBarButtonItem" title="Item" image="menu" id="nwJ-zV-Bej">
                             <connections>
                                 <action selector="didTapMenu:" destination="Q5w-Ih-31b" id="6h7-bB-U33"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="View" id="rbG-fG-V6G">
+                            <connections>
+                                <segue destination="h2A-wz-AAP" kind="show" id="iuY-lq-Maw"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -1138,5 +1189,6 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="Ujq-eP-OQW"/>
+        <segue reference="iuY-lq-Maw"/>
     </inferredMetricsTieBreakers>
 </document>

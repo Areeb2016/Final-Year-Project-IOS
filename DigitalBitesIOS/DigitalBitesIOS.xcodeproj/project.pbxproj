@@ -23,6 +23,7 @@
 		96000B902393FDB10084D54F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96000B8F2393FDB10084D54F /* ViewController.swift */; };
 		96000B932393FDF30084D54F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96000B912393FDF30084D54F /* Main.storyboard */; };
 		96000B952393FE160084D54F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 96000B942393FE160084D54F /* Assets.xcassets */; };
+		96A64BD12396718900B5AF24 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A64BD02396718900B5AF24 /* Category.swift */; };
 		96E17AE223940880005C8F4E /* ResTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96E17AE123940880005C8F4E /* ResTableViewController.swift */; };
 		96E17AE423940A16005C8F4E /* ResTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96E17AE323940A16005C8F4E /* ResTableViewCell.swift */; };
 		96E17AE62394107E005C8F4E /* FoodViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96E17AE52394107E005C8F4E /* FoodViewController.swift */; };
@@ -53,6 +54,7 @@
 		96000B8F2393FDB10084D54F /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = "../../Digital Bites/Digital Bites/ViewController.swift"; sourceTree = "<group>"; };
 		96000B922393FDF30084D54F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "../../Digital Bites/Digital Bites/Base.lproj/Main.storyboard"; sourceTree = "<group>"; };
 		96000B942393FE160084D54F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = "../../Digital Bites/Digital Bites/Assets.xcassets"; sourceTree = "<group>"; };
+		96A64BD02396718900B5AF24 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		96E17AE123940880005C8F4E /* ResTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResTableViewController.swift; sourceTree = "<group>"; };
 		96E17AE323940A16005C8F4E /* ResTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResTableViewCell.swift; sourceTree = "<group>"; };
 		96E17AE52394107E005C8F4E /* FoodViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodViewController.swift; sourceTree = "<group>"; };
@@ -119,6 +121,7 @@
 				96000A4A2393FD390084D54F /* ApiUrlPart.swift */,
 				96000A4B2393FD390084D54F /* CategoryCollectionViewCell.swift */,
 				96000A4C2393FD390084D54F /* CategoryViewController.swift */,
+				96A64BD02396718900B5AF24 /* Category.swift */,
 				96000A4F2393FD3A0084D54F /* HelpViewController.swift */,
 				96000A502393FD3A0084D54F /* MenuViewController.swift */,
 				96E17B0123943A12005C8F4E /* SignupViewController.swift */,
@@ -281,6 +284,7 @@
 				96000A552393FD3A0084D54F /* CategoryCollectionViewCell.swift in Sources */,
 				96000A372393FCEC0084D54F /* SceneDelegate.swift in Sources */,
 				96000A582393FD3A0084D54F /* SlideInTransition.swift in Sources */,
+				96A64BD12396718900B5AF24 /* Category.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
