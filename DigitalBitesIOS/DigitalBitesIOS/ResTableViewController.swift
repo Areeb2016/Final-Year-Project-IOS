@@ -18,13 +18,39 @@ class ResTableViewController: UITableViewController {
 
             navigationItem.title = "Select Pizza"
 
-//            fetchInventory { pizzas in
-//                guard pizzas != nil else { return }
-//                self.pizzas = pizzas!
-//                self.tableView.reloadData()
-//            }
+            fetchInventory { pizzas in
+                guard pizzas != nil else { return }
+                self.pizzas = pizzas!
+                self.tableView.reloadData()
+            }
         }
     
+    private func fetchInventory(completion: @escaping ([Pizza]?) -> Void) {
+        AF.request("http://127.0.0.1:4000/inventory", method: .get)
+            .validate()
+            .responseJSON { response in
+               switch response.result{
+                case .success(let value):
+                     if let JSON = value as? [String: Any] {
+                         let status = JSON["status"] as! String
+                         print(status)
+                     }
+                 case .failure( _): break
+                 }
+                
+                guard let rawInventory = response.value as? [[String: Any]?] else { return completion(nil) }
+
+                let inventory = rawInventory.compactMap { pizzaDict -> Pizza? in
+                    var data = pizzaDict!
+                    data["image"] = UIImage(named: pizzaDict!["image"] as! String)
+
+                    return Pizza(data: data)
+                }
+
+                completion(inventory)
+            }
+    }
+
 
         @IBAction func ordersButtonPressed(_ sender: Any) {
             performSegue(withIdentifier: "orders", sender: nil)
