@@ -68,7 +68,7 @@ class ResTableViewController: UITableViewController {
             let cell = tableView.dequeueReusableCell(withIdentifier: "Pizza", for: indexPath) as! ResTableViewCell
 
             cell.name.text = pizzas[indexPath.row].name
-            cell.imageView?.image = pizzas[indexPath.row].image
+   //         cell.imageView?.image = pizzas[indexPath.row].image
             cell.amount.text = "$\(pizzas[indexPath.row].amount)"
             cell.miscellaneousText.text = pizzas[indexPath.row].description
 

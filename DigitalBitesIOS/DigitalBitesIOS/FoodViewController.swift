@@ -21,7 +21,7 @@ class FoodViewController: UIViewController {
             super.viewDidLoad()
 
             navigationItem.title = pizza!.name
-            pizzaImageView.image = pizza!.image
+//            pizzaImageView.image = pizza!.image
             pizzaDescription.text = pizza!.description
             amount.text = "$\(String(describing: pizza!.amount))"
         }

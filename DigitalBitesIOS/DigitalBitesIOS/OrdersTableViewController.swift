@@ -71,7 +71,7 @@ class OrdersTableViewController: UITableViewController {
                 let order = orders[indexPath.row]
 
                 cell.textLabel?.text = order.pizza.name
-                cell.imageView?.image = order.pizza.image
+   //             cell.imageView?.image = order.pizza.image
                 cell.detailTextLabel?.text = "$\(order.pizza.amount) - \(order.status.rawValue)"
 
                 return cell
